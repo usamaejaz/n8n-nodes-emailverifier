@@ -1,0 +1,52 @@
+{
+  "name": "@emailverifier/n8n-nodes-emailverifier",
+  "version": "0.1.1",
+  "description": "Verify email addresses and check email domains with emailverifier.dev in n8n.",
+  "license": "MIT",
+  "homepage": "https://emailverifier.dev/docs/api",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "email-verification",
+    "email-validation",
+    "emailverifier"
+  ],
+  "author": {
+    "name": "Usama Ejaz",
+    "email": "support@emailverifier.dev",
+    "url": "https://emailverifier.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usamaejaz/n8n-nodes-emailverifier.git"
+  },
+  "bugs": { "url": "https://github.com/usamaejaz/n8n-nodes-emailverifier/issues" },
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "build": "n8n-node build",
+    "build:watch": "tsc --watch",
+    "check": "npm run lint && npm run build && npm test",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "test": "node --test test/node-check.cjs",
+    "prepublishOnly": "n8n-node prerelease"
+  },
+  "files": ["dist"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": ["dist/credentials/EmailVerifierApi.credentials.js"],
+    "nodes": ["dist/nodes/EmailVerifier/EmailVerifier.node.js"]
+  },
+  "publishConfig": { "access": "public", "provenance": true },
+  "devDependencies": {
+    "@n8n/node-cli": "0.46.0",
+    "eslint": "9.32.0",
+    "prettier": "3.6.2",
+    "release-it": "^19.0.4",
+    "typescript": "5.9.2"
+  },
+  "peerDependencies": { "n8n-workflow": "*" }
+}
