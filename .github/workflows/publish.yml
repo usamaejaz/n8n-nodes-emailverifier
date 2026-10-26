@@ -25,3 +25,9 @@ jobs:
         run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Scan the published package
+        run: |
+          package_spec="$(node -p "const p = require('./package.json'); p.name + '@' + p.version")"
+          npx --yes @n8n/scan-community-package@0.40.0 "$package_spec" | tee scan.log
+          # The scanner can exit zero even when validation fails.
+          grep -Fq "$package_spec has passed all security checks" scan.log

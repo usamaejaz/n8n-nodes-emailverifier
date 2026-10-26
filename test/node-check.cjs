@@ -3,6 +3,12 @@ const test = require('node:test');
 
 const { EmailVerifier } = require('../dist/nodes/EmailVerifier/EmailVerifier.node.js');
 const { EmailVerifierApi } = require('../dist/credentials/EmailVerifierApi.credentials.js');
+const codex = require('../dist/nodes/EmailVerifier/EmailVerifier.node.json');
+const packageJson = require('../package.json');
+
+test('codex identifies the packaged node with its fully qualified name', () => {
+	assert.equal(codex.node, `${packageJson.name}.${new EmailVerifier().description.name}`);
+});
 
 function property(description, name, resource) {
 	return description.properties.find(

@@ -66,4 +66,5 @@ Report node issues in the [node repository](https://github.com/usamaejaz/n8n-nod
 
 ## Version history
 
+- `0.1.2`: Fix node metadata for n8n verification and strengthen release validation.
 - `0.1.1`: Initial scoped npm release with Email, Domain, and Usage operations.
