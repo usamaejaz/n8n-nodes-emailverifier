@@ -1,6 +1,6 @@
 {
   "name": "@emailverifier/n8n-nodes-emailverifier",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Verify email addresses and check email domains with emailverifier.dev in n8n.",
   "license": "MIT",
   "homepage": "https://emailverifier.dev/docs/api",
