@@ -1,6 +1,6 @@
 {
   "name": "@emailverifier/n8n-nodes-emailverifier",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Verify email addresses and check email domains with emailverifier.dev in n8n.",
   "license": "MIT",
   "homepage": "https://emailverifier.dev/docs/api",
@@ -42,7 +42,7 @@
   },
   "publishConfig": { "access": "public", "provenance": true },
   "devDependencies": {
-    "@n8n/node-cli": "0.46.0",
+    "@n8n/node-cli": "0.53.4",
     "eslint": "9.32.0",
     "prettier": "3.6.2",
     "release-it": "^19.0.4",
