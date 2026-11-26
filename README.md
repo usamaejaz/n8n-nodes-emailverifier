@@ -6,9 +6,15 @@ This community node connects [emailverifier.dev](https://emailverifier.dev) to n
 
 ## Installation
 
-Self-hosted n8n instance owners can install `@emailverifier/n8n-nodes-emailverifier` from **Settings > Community Nodes**.
+The emailverifier.dev node is verified by n8n and available on n8n Cloud. [Official n8n listing](https://n8n.io/integrations/emailverifierdev/)
 
-The package is awaiting n8n verification. Once n8n approves it, instance owners and admins can also discover and install it from the nodes panel on n8n Cloud.
+1. As an instance owner or admin, open the nodes panel (**+**) in the n8n workflow editor.
+2. Search for **emailverifier.dev** and select the verified node under **More from the community**.
+3. Select **Install**, then [connect your project API key](#credentials).
+
+On self-hosted n8n, instance owners can also install `@emailverifier/n8n-nodes-emailverifier` from **Settings > Community nodes > Install**.
+
+If you can’t install the node, use the [HTTP Request setup](https://emailverifier.dev/integrations/n8n#n8n-cloud) on n8n Cloud or self-hosted n8n.
 
 ## Operations
 
